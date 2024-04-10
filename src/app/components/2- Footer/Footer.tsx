@@ -18,7 +18,7 @@ const Footer_Info = ({title, links}: ColumnProps) =>(
 
 function Footer(){
     return(
-        <footer className='bg-[#f3efefd5] dark:bg-[#333232b4] border-solid border-t-2 dark:border-[#3f3f4666] p-3'>
+        <footer className='bg-[#7c7a7a18] dark:bg-[#333232b4] border-solid border-t-2 dark:border-[#3f3f4666] p-3'>
             <div className='info-container p-3'>
                 <div>
                     <Footer_Info title={footerLinks[0].title} links={footerLinks[0].links} />

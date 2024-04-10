@@ -14,6 +14,19 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --primary: #18181b;
+  --border-split: #3f3f4666;
+  --navDarkMode: #18181b;
+  --bgHeader: #27272a;
+
+  --title: #f4f4f5;
+  --subtitle: #a1a1aa;
+
+  --blue: #5dbcfc;
+  --icon-hover: #d4d4d8;
+
+  --header-footer-old-bg: #f3efefd5;
 }
 
 @media (prefers-color-scheme: dark) {

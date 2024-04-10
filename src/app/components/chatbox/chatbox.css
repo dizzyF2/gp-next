@@ -1,0 +1,99 @@
+.chat-container{
+    height: 315px;
+    background-color: lightgrey;
+    position: fixed;
+    box-shadow: 0px 0px 15px 0px black;
+}
+
+
+.chat-container .header{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0px 14px;
+    background-color: #3278FF;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+.chat-container .header .logo{
+    height: 40px;
+    width: 40px;
+    box-shadow: 0px 0px 10px 0px black;
+    border-radius: 50%;
+}
+
+.chat-container .header img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.chat-container .header .title{
+    padding-left: 10px;
+}
+
+.chat-container .chat-body{
+    height: 200px;
+    display: flex;
+}
+
+.chat-container footer{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid blue;
+}
+
+.chat-container footer .input{
+    flex: 5;
+    
+}
+
+.chat-container footer #txtinput{
+    line-height: 30px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    caret-color: black;
+    font-size: 1rem;
+    width: 100%;
+    color: black;
+}
+
+.chat-container footer .send{
+    flex: 1;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.chat-container footer .send img{
+    height: 100%;
+    width: 100%;
+}
+
+/*
+        <div className="chat-container rounded-xl z-40">
+        <div className="header bg-[#3278FF] rounded-t-xl flex justify-between">
+            <div className="flex">
+                <div className="logo"><Image src={image1} width={25} height={25} alt=""></Image></div>
+                <div className="title">Faris</div>
+            </div>
+            <div className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#9693935d] cursor-pointer">
+                <ChevronDown onClick={()=>setchatbox(!showchatbox)}/>
+            </div>
+        </div>
+        <div className="chat-body dark:bg-gray-800">
+            <p>message</p>
+        </div>
+        <footer className="p-1 dark:bg-gray-600">
+            <div className="input">
+            <input type="text" placeholder="send a message..." id="txtinput"></input>
+            </div>
+            <div className="send"><SendHorizontal className="" color="black" size={35} /></div>
+        </footer>
+    </div> */
