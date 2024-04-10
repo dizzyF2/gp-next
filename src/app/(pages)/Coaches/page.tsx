@@ -1,6 +1,7 @@
-import SearchBar from "@/app/components/Search/SearchBar"
 import Filters from "@/app/components/Filters/Filters"
 import Products from "@/app/components/Products/Products"
+import SearchBar from "@/app/components/Search/SearchBar"
+
 
 function Coaches() {
     return (
@@ -9,7 +10,7 @@ function Coaches() {
                 <SearchBar specificPlaceHolder="search for coach"/>
                 <Filters/>
             </div>
-            <Products src="../../pages/coachPage"/>
+            <Products src="../Coaches/Profile"/>
         </div>
     )
 }

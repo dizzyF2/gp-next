@@ -1,9 +1,8 @@
 import SearchBar from "@/app/components/Search/SearchBar"
-import "./globals.css"
 import Filters from "@/app/components/Filters/Filters"
 import Products from "@/app/components/Products/Products"
 
-function Bulk() {
+function Nutrinational() {
     return (
         <div className="bulk-container">
             <div className="mt-20">
@@ -15,4 +14,4 @@ function Bulk() {
     )
 }
 
-export default Bulk
+export default Nutrinational

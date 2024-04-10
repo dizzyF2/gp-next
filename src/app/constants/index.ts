@@ -7,11 +7,11 @@ export const NavLinks = [
 ];
 
 export const NavLinks1 = [
-    { href: "../pages/Recipes", key: "Recipes", text: "Recipes" },
-    { href: "../pages/Slimming", key: "Slimming", text: "Slimming" },
-    { href: "../pages/Bulk", key: "Bulk", text: "Bulk" },
-    { href: "../pages/Nutrinational", key: "Nutrinational", text: "Nutrinational" },
-    { href: "../pages/Coaches", key: "Coaches", text: "Coaches" },
+    { href: "../Recipes", key: "Recipes", text: "Recipes" },
+    { href: "../Slimming", key: "Slimming", text: "Slimming" },
+    { href: "../Bulk", key: "Bulk", text: "Bulk" },
+    { href: "../Nutrinational", key: "Nutrinational", text: "Nutrinational" },
+    { href: "../Coaches", key: "Coaches", text: "Coaches" },
 ];
 
 export const categoryFilters = [

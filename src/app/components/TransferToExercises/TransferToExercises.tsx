@@ -16,7 +16,7 @@ function TransferToExercises() {
                 <div className='capitalize text-xl leading-9 mb-5'>
                     check out the most effective exercises
                 </div>
-                <button className='uppercase bg-[#FF2625] text-white p-3 rounded-lg self-center md:self-start'><Link href={"../../pages/Exercises"}>explore exercises</Link></button>
+                <button className='uppercase bg-[#FF2625] text-white p-3 rounded-lg self-center md:self-start'><Link href={"../Exercises"}>explore exercises</Link></button>
                 <div className='font-semibold text-[200px] text-[#ff2625] opacity-15 hidden md:block'>
                     Exercises
                 </div>
