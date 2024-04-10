@@ -1,8 +1,17 @@
+
 export const NavLinks = [
-    { href: "/recipes", key: "Recipes", text: "Recipes" },
+    { href: "../pages/Recipes", key: "Recipes", text: "Recipes" },
     { href: "/", key: "Calories", text: "Calories" },
-    { href: "/trainners", key: "coaches", text: "coaches" },
+    { href: "../pages/Coaches", key: "Coaches", text: "Coaches" },
     { href: "/", key: "About", text: "About" },
+];
+
+export const NavLinks1 = [
+    { href: "../Recipes", key: "Recipes", text: "Recipes" },
+    { href: "../Slimming", key: "Slimming", text: "Slimming" },
+    { href: "../Bulk", key: "Bulk", text: "Bulk" },
+    { href: "../Nutrinational", key: "Nutrinational", text: "Nutrinational" },
+    { href: "../Coaches", key: "Coaches", text: "Coaches" },
 ];
 
 export const categoryFilters = [
@@ -28,17 +37,53 @@ export const recipesFilters = [
     {key: "Protiens", filter: "Protiens" },
     ];
 
-    export const trainerFilters = [
-        {key: "Gym", filter: "Gym" },
-        {key: "LifeStyle", filter: "LifeStyle" },
-        {key: "Health", filter: "Health" },
-        {key: "calisthenics", filter: "calisthenics" },
-    ];
+export const trainerFilters = [
+    {key: "Gym", filter: "Gym" },
+    {key: "LifeStyle", filter: "LifeStyle" },
+    {key: "Health", filter: "Health" },
+    {key: "calisthenics", filter: "calisthenics" },
+];
+
+export const all = [
+    {key: "Slimming", filter: "Slimming" },
+    {key: "Bulking up", filter: "Bulking up" },
+    {key: "Healthy", filter: "Healthy recipes" },
+    {key: "nutrinational", filter: "nutrinational healthy fears" },
+];
+
 
 export const productImages = [
     {src:'/public/images/11.webp', key:"food", title:"food"},
     {src:'/public/images/2.jpg', key:"health", title:"health"},
 ];
+
+export const coachReview = [
+    {
+        key: 1,
+        name:"Italo Melo",
+        img:"/HomeCoachSection/ItaloMelo.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 2,
+        name:"jim carry",
+        img:"/HomeCoachSection/manCoach.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 3,
+        name:"Hamed Gharaee",
+        img:"/HomeCoachSection/HamedGharaee.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 4,
+        name:"Simon Robben",
+        img:"/HomeCoachSection/SimonRobben.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    ];
+
 
 export const coachInfo = [
 {

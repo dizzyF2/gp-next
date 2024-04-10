@@ -35,7 +35,7 @@ export default function ThemeSwitch() {
 
         if (resolvedTheme === "light") {
             return(
-                    <div className=" cursor-pointer ">
+                    <div className=" cursor-pointer">
                         <Moon color="black" size={21}  onClick={() => setTheme("dark")} /> 
                     </div>
             )
