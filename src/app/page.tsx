@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import TransferToExercises from "./components/TransferToExercises/TransferToExercises";
 import TransferToCoachesList from "./components/TransferToCoachesList/TransferToCoachesList";
 import TransferToCoachRegister from "./components/TransferToCoachRegister/TransferToCoachRegister";
