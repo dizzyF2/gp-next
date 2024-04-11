@@ -6,7 +6,7 @@ function Recipes() {
     return (
         <div className="recipes-container">
             <div className="mt-20">
-                <SearchBar specificPlaceHolder={"Search For Recipe"}/>
+                <SearchBar specificPlaceHolder={"Search For Recipe..."}/>
                 <Filters/>
             </div>
             <Products src="/"/>

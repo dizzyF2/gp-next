@@ -51,7 +51,7 @@ function Chatbox() {
                         <div className="input">
                         <input type="text" placeholder="send a message..." id="txtinput"></input>
                         </div>
-                        <div className="send"><SendHorizontal className="" color="black" size={35} /></div>
+                        <div className="send text-black dark:text-white"><SendHorizontal className="" color="black" size={35} /></div>
                     </footer>
             </div>
             )}
