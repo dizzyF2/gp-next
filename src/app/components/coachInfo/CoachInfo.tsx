@@ -1,10 +1,15 @@
 import "./coachinfo.css"
 
 
+
 function CoachInfo() {
     return (
         <div className='right-container'>
-            <video src="../../../../public/selfIntro.mp4" typeof="video/mp4" controls />
+            <div className="border-2 border-gray-300 dark:border-slate-500">
+            <video controls src="/introduction.mp4" typeof="video/mp4" width={600} height={350}>
+                your browser does not support video tag
+            </video>
+            </div>
             
         <div className='info'>
             <h3>About</h3>

@@ -6,10 +6,7 @@
     align-items: center;
 }
 
-.right-container video{
-    width: 600px;
-    height: 350px;
-}
+
 
 .right-container .info{
     border-bottom: 2px black solid;
