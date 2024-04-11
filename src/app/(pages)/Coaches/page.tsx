@@ -10,7 +10,7 @@ function Coaches() {
                 <SearchBar specificPlaceHolder="search for coach"/>
                 <Filters/>
             </div>
-            <Products src="../Coaches/Profile"/>
+            <Products src="/Coaches/Profile"/>
         </div>
     )
 }
