@@ -2,7 +2,6 @@ import {recipesFilters} from "@/app/constants"
 import "./filters.css"
 
 
-
 function Filters() {
     return (
         <div className="filters">

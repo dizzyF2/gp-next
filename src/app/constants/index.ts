@@ -61,29 +61,151 @@ export const coachReview = [
     {
         key: 1,
         name:"Italo Melo",
-        img:"/HomeCoachSection/ItaloMelo.jpg",
+        img:"/CoachesList/ItaloMelo.jpg",
         review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
     },
     {
         key: 2,
         name:"jim carry",
-        img:"/HomeCoachSection/manCoach.jpg",
+        img:"/CoachesList/manCoach.jpg",
         review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
     },
     {
         key: 3,
         name:"Hamed Gharaee",
-        img:"/HomeCoachSection/HamedGharaee.jpg",
+        img:"/CoachesList/HamedGharaee.jpg",
         review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
     },
     {
         key: 4,
         name:"Simon Robben",
-        img:"/HomeCoachSection/SimonRobben.jpg",
+        img:"/CoachesList/SimonRobben.jpg",
         review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
     },
     ];
 
+export const CoachesList = [
+    {
+        key: 1,
+        name:"Italo Melo",
+        img:"/CoachesList/ItaloMelo.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 2,
+        name:"jim carry",
+        img:"/CoachesList/manCoach.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 3,
+        name:"Hamed Gharaee",
+        img:"/CoachesList/HamedGharaee.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 4,
+        name:"Simon Robben",
+        img:"/CoachesList/SimonRobben.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 5,
+        name:"Ben engelsen",
+        img:"/CoachesList/ben-engelsen.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 6,
+        name:"joseph gonzalez",
+        img:"/CoachesList/joseph-gonzalez.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 7,
+        name:"jurica koletic",
+        img:"/CoachesList/jurica-koletic.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 8,
+        name:"Rony Robenson",
+        img:"/CoachesList/RonyRobenson.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 9,
+        name:"vince veras",
+        img:"/CoachesList/Vince-veras.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    ];
+
+export const RecipesCardInfo = [
+    {
+        key: 1,
+        img:"/Recipes/andrei.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 2,
+        img:"/Recipes/anna-pelzer.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 3,
+        img:"/Recipes/brooke-lark.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 4,
+        img:"/Recipes/cala.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 5,
+        img:"/Recipes/joseph-gonzalez.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 6,
+        img:"/Recipes/mariana.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 7,
+        img:"/Recipes/nathan-dumlao.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 8,
+        img:"/Recipes/taylor-kiser.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+];
+
+export const RecipesReview = [
+    {
+        key: 1,
+        img:"/Recipes/andrei.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 2,
+        img:"/Recipes/brooke-lark.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 3,
+        img:"/Recipes/nathan-dumlao.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+    {
+        key: 4,
+        img:"/Recipes/taylor-kiser.jpg",
+        review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
+    },
+];
 
 export const coachInfo = [
 {

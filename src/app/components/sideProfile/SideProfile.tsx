@@ -17,7 +17,7 @@ function SideProfile() {
                     <span></span>
                 </div>
                 <div className="mt-4">
-                    <h2>Italo Melo</h2>
+                    <h2>patrick henry</h2>
                     <div className="info flex flex-col gap-1">
                         <div className="flex gap-1 items-center">
                             <div className="flex justify-start gap-1">

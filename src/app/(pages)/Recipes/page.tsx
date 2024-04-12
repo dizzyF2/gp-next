@@ -1,6 +1,7 @@
 import Products from "@/app/components/Products/Products"
 import SearchBar from "@/app/components/Search/SearchBar"
 import Filters from "@/app/components/Filters/Filters"
+import RecipesProduct from "@/app/components/RecipesProduct/RecipesProduct"
 
 function Recipes() {
     return (
@@ -9,7 +10,7 @@ function Recipes() {
                 <SearchBar specificPlaceHolder={"Search For Recipe..."}/>
                 <Filters/>
             </div>
-            <Products src="/"/>
+            <RecipesProduct/>
         </div>
     )
 }
