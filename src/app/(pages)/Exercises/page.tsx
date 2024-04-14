@@ -9,7 +9,7 @@ function Exercises() {
                 <SearchBar specificPlaceHolder="Search for exercises"/>
                 <Filters/>
             </div>
-            <Products src="../../pages/ExerciseInfo"/>  
+            <Products src="/Exercises/ExerciseInfo"/>  
         </div>
     )
 }
