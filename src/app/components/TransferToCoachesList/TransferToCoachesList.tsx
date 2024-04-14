@@ -1,5 +1,4 @@
 import Image from "next/image"
-import "./transferToCoachesList.css"
 
 import {coachReview} from "../../constants/index"
 import Link from "next/link"
