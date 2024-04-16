@@ -10,7 +10,7 @@ import { headers } from "next/headers"
 function Header() {
     const [Navbar, setNavbar] = useState(false)
     const toggleNavbar = () =>{
-        if(window.scrollY>25){
+        if(window.scrollY>50){
             setNavbar(true)
         }else{
             setNavbar(false)
@@ -29,7 +29,7 @@ function Header() {
     }
 
     return (
-        <header className={Navbar? 'fixed duration-200 top-0 z-[999] w-full flex justify-between items-center h-20 p-4 bg-[#d1c9c9] dark:bg-[#333232]'  : 'duration-300 top-0 z-[999] w-full flex justify-between items-center  h-20 p-4'}>
+        <header className={Navbar? 'fixed duration-200 top-0 z-[999] w-full flex justify-between items-center h-20 p-4 bg-[#ecebeb] dark:bg-[#333232]'  : 'duration-300 top-0 z-[999] w-full flex justify-between items-center  h-20 p-4'}>
             <Link className={Navbar?"text-[#0f0] no-underline uppercase font-bold text-[1.5em]" : "text-[#0f0] no-underline uppercase font-bold text-[1.8em]"} href="/"><span>NutriSquad</span></Link>    
             <nav className="hidden md:flex justify-between items-center gap-16 text-base font-medium">
                 <ul className="capitalize flex justify-between gap-6">
