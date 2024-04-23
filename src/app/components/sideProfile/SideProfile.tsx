@@ -1,10 +1,11 @@
 
 import { MessageCircleMore, Star } from "lucide-react"
 import "./sideprofile.css"
-import Image from "next/image"
-import image1 from "../../../../public/BlankProfile.png"
 import Chatbox from "../chatbox/Chatbox"
 import { useState } from "react"
+import UserMenu from "../UserMenu/UserMenu";
+import ProfileImage from "../ProfileImage/ProfileImage";
+
 
 
 function SideProfile() {
@@ -13,7 +14,7 @@ function SideProfile() {
         <>
             <div className='profile-container pt-10 ml-5'>
                 <div className="img-container">
-                    <Image className='img1' src={image1} alt='profile image' width={100} height={100}></Image>
+                    <ProfileImage Width={100} Height={100}/>
                     <span></span>
                 </div>
                 <div className="mt-4">

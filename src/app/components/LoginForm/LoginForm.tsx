@@ -1,7 +1,22 @@
+'use client'
+
+import { signIn } from "next-auth/react";
 import Link from "next/link"
+import { FormEvent } from "react";
 
 
 function LoginForm() {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => { 
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        signIn('credentials', {
+            email: formData.get('email'),
+            password: formData.get('password'),
+            redirect: false,
+        })
+    };
+
+
     return (
         <div className="w-full min-h-screen flex justify-center items-center bg-slate-300 dark:bg-[#18181b] ">
             <div className="relative w-[380px] h-[480px] rounded-lg overflow-hidden bg-[#a5a4a41f] dark:bg-[#333232ce] border-solid border-b-2 dark:border-[#3f3f4666]">
@@ -12,10 +27,11 @@ function LoginForm() {
                 to-transparent -top-[50%] -left-[50%] animate-spin-delay origin-bottom-right">
                 </div>
                 <div className="absolute inset-1 rounded-lg z-10 p-5 bg-gray-200 dark:bg-[#333232] border-solid border-b-2 dark:border-[#3f3f4666]">
-                    <form >
+                    <form onSubmit={handleSubmit}>
                         <h2 className="text-x1 font-semibold text-lime-500 text-center mb-12">Sign in</h2>
                         <div className="relative flex flex-col mb-8">
                             <input
+                                name="email"
                                 type="email"
                                 id="email"
                                 autoFocus
@@ -36,6 +52,7 @@ function LoginForm() {
 
                         <div className="relative flex flex-col mb-8">
                             <input
+                                name="password"
                                 type="password"
                                 id="password"
                                 autoFocus
@@ -56,9 +73,7 @@ function LoginForm() {
                         <button type="submit" className="py-1.5 text-gray-100 bg-lime-500 w-full 
                         rounded hover:bg-lime-600 hover-scale-105 duration-300 mb-8"><Link href={"/"}>Log in</Link>
                         </button>
-                        <div className="p-2 mt-2 bg-[#ff2625] text-white">
-                                Error message
-                            </div>
+                        
 
                         <p className="text-gray-500">you dont have an account? 
                         <Link href={"../Register"} className="ml-1 text-lime-500 hover:underline">Register</Link>

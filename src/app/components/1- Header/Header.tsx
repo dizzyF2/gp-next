@@ -6,6 +6,7 @@ import {NavLinks1 } from "@/app/constants"
 import { Menu } from "lucide-react"
 import { useEffect, useState } from "react"
 import { headers } from "next/headers"
+import UserMenu from "../UserMenu/UserMenu"
 
 function Header() {
     const [Navbar, setNavbar] = useState(false)
@@ -40,7 +41,8 @@ function Header() {
                     ))}
                 </ul>
             <div className="flex items-center gap-9">
-                <div className='capitalize hover:bg-slate-300 p-1 rounded-xl hover:text-black'><Link href={"../SignIn"}> <h5>sign in</h5> </Link></div>
+                 <div className='capitalize hover:bg-slate-300 p-1 rounded-xl hover:text-black'><Link href={"../SignIn"}> <h5>sign in</h5> </Link></div>
+                
                 <ThemeSwitch/>
             </div>
             </nav>
