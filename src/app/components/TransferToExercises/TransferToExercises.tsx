@@ -22,7 +22,7 @@ function TransferToExercises() {
                 </div>
             </div>
             <div className="md:w-1/2 z-10">
-                <Image className='md:rounded-l-3xl w-96 h-80 md:w-[450px] md:h-[550px]' alt='' src={exercisesImage}/>
+                <Image className='md:rounded-l-3xl w-96 h-80 md:w-[450px] md:h-[550px]' alt='' src={exercisesImage} loading="lazy"/>
             </div>
     </div>
     )

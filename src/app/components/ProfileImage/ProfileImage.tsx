@@ -8,7 +8,7 @@ type sizeProps={
 function ProfileImage({Width, Height}:sizeProps) {
     return (
         <>
-            <Image className='img1 rounded-[50%] object-cover' src={image1} alt='profile image' width={Width} height={Height}/>
+            <Image className='img1 rounded-[50%] object-cover shadow-[1px_3px_12px_#0000002e]' src={image1} alt='profile image' width={Width} height={Height}/>
         </>
     )
 }
