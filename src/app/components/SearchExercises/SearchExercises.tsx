@@ -15,9 +15,19 @@ function SearchExercises({setExercises, bodyPart, setBodyPart}:any) {
 
     useEffect(() => {
         const fetchExercisesData = async () => {
-            const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', ExerciseOptions)
+            const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', ExerciseOptions);
 
+            // Check the structure of bodyPartsData
+            console.log('bodyPartsData:', bodyPartsData);
+
+            // Check if bodyPartsData is an array before setting state
+            if (Array.isArray(bodyPartsData)) {
+            // Assuming setBodyParts is a function to set state
             setBodyParts(['all', ...bodyPartsData]);
+            } else {
+            // If bodyPartsData is not an array, handle the error
+            console.error('bodyPartsData is not an array:', bodyPartsData);
+            }
         }
         
         fetchExercisesData();
@@ -27,16 +37,30 @@ function SearchExercises({setExercises, bodyPart, setBodyPart}:any) {
         if(search){
             const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', ExerciseOptions);
             //console.log(exercisesData)
-            const SearchedExercises = exercisesData.filter(
+            /*const SearchedExercises = exercisesData.filter(
                 (exercise:any) => exercise.name.toLowerCase().includes(search) 
                 || exercise.target.toLowerCase().includes(search)
                 || exercise.equipment.toLowerCase().includes(search)
                 || exercise.bodyPart.toLowerCase().includes(search)
-            ) 
+            ) */
+            if (!Array.isArray(exercisesData)) {
+                console.error("Error: exercisesData is not an array", exercisesData);
+                // Handle the error, maybe show a message to the user or return early
+                // For now, let's assume you want an empty array for SearchedExercises
+                const SearchedExercises = [];
+            } else {
+                const SearchedExercises = exercisesData.filter(
+                    (exercise:any) => exercise.name.toLowerCase().includes(search) 
+                    || exercise.target.toLowerCase().includes(search)
+                    || exercise.equipment.toLowerCase().includes(search)
+                    || exercise.bodyPart.toLowerCase().includes(search)
+                );
+                // Use SearchedExercises as needed...
+                setSearch('');
+                setExercises(SearchedExercises);
+            }
             
 
-            setSearch('');
-            setExercises(SearchedExercises);
         } 
     }
 

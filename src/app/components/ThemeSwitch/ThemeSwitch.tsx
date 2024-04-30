@@ -4,11 +4,11 @@ import { Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import "./themeswitch.css"
 
 export default function ThemeSwitch() {
+    const {resolvedTheme, theme, setTheme} = useTheme();
+
     const [mounted, setMounted] = useState(false);
-    const { setTheme, resolvedTheme } = useTheme();
 
     useEffect(() => setMounted(true), []);
 
@@ -25,19 +25,11 @@ export default function ThemeSwitch() {
             />
         );
 
-    if (resolvedTheme === "dark") {
-            return(
-                <div className="cursor-pointer">
-                    <Sun color="yellow" size={21}  onClick={() => setTheme("light")} />
-                </div>
-            )
-        }
-
-        if (resolvedTheme === "light") {
-            return(
-                    <div className=" cursor-pointer">
-                        <Moon color="black" size={21}  onClick={() => setTheme("dark")} /> 
-                    </div>
-            )
-        }
+        return(
+            <div className="cursor-pointer" onClick={()=>{
+                setTheme(resolvedTheme === "light"? "dark" : "light")
+            }}>
+                {theme === "light" ? <Moon color="black" size={21}/> : <Sun color="yellow" size={21}/> }
+            </div>
+        )
 }

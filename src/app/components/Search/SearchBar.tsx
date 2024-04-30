@@ -1,5 +1,4 @@
 import { Search } from "lucide-react"
-import "./searchbar.css"
 
 type defindtype={
     specificPlaceHolder: string;

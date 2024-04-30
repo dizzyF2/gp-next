@@ -13,8 +13,7 @@ function Products({src}:props) {
             {["1","2","3","4","5","1","2","3","4","5","1","2","3","4","5"].map((item)=>{
                 return(
                     <div key={item} className="card dark:border-[#5dbcfc4d] dark:border-2 dark:hover:border-[#5dbcfc] bg-gradient-to-t from-[#7c7a7a18] to-[#7c7a7a18] dark:bg-gradient-to-t dark:from-[#ffffff0d] dark:to-[#ffffff0d]">
-                        <Image className="flex items-center justify-center" src={image1} width={150} height={150} alt=""></Image>
-                        {/* <img src={image1} alt='im' width='200px' height='200px'/>*/ }
+                        <Image className="flex items-center justify-center" src={image1} width={150} height={150} alt=""/>
                         <div className="card-info">
                             <h2 className="title dark:text-[#f4f4f5] font-extrabold">Product Name</h2>
                             <p className="subtitle dark:text-[#a1a1aa]">Lorem ipsum dolori aperiam rerum id quod eligendi debitis earum nesciunt!</p>

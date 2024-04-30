@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image"
-import image1 from "../../../../public/user.png"
+import image1 from "../../../../public/BlankProfile.png"
 import { ChevronDown, ChevronUp,SendHorizontal } from "lucide-react"
 import "./chatbox.css"
 import { useState } from "react";

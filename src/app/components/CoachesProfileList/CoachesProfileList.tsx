@@ -11,7 +11,7 @@ function CoachesProfileList() {
                 {CoachesList.map((item)=>(
                     <div key={item.key} className="p-3 flex flex-col justify-between w-[250px] border-2 border-solid border-[#5fbdfc4d] duration-300 hover:border-2 hover:border-solid hover:border-[#5dbcfc] hover:scale-[1.01 hover:rotate-[1deg]">
                         <div className="flex flex-col gap-1 justify-center items-center">
-                            <Image className="rounded-full" src={item.img} alt="" width={75} height={75}/>
+                            <Image loading="lazy" className="rounded-full h-24 w-24" src={item.img} alt="" width={200} height={200}/>
                             <h5 className="dark:text-[#f4f4f5] font-extrabold">{item.name}</h5>
                             <p className="text-sm leading-5 dark:text-[#a1a1aa]">{item.review}</p>
                         </div>

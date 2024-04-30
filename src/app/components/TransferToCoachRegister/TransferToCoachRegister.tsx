@@ -1,5 +1,4 @@
 import Link from "next/link"
-import "./transferToCoachRegister.css"
 
 function TransferToCoachRegister() {
     return (

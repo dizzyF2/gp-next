@@ -11,7 +11,7 @@ function TransferToCoachesList() {
                 {coachReview.map((item)=>(
                     <div key={item.key} className="flex flex-col justify-between bg-slate-100 border border-slate-200 items-center p-6 space-y-2 rounded-lg dark:bg-gradient-to-t dark:from-[#ffffff0d] dark:to-[#ffffff0d]">
                         <>
-                        <Image className="rounded-full w-auto h-auto" src={item.img} alt="" width={75} height={75}/>
+                        <Image loading="lazy" className="rounded-full w-auto h-auto" src={item.img} alt="" width={75} height={75}/>
                         <h5 className="font-bold text-lg text-slate-900">{item.name}</h5>
                         <p className="text-sm leading-5 dark:text-black">{item.review}</p>
                         </>

@@ -1,4 +1,3 @@
-import Products from "@/app/components/Products/Products"
 import SearchBar from "@/app/components/Search/SearchBar"
 import Filters from "@/app/components/Filters/Filters"
 import RecipesProduct from "@/app/components/RecipesProduct/RecipesProduct"

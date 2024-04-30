@@ -4,13 +4,15 @@ import Link from "next/link"
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch"
 import {NavLinks1 } from "@/app/constants"
 import { Menu } from "lucide-react"
-import { useEffect, useState } from "react"
-import { headers } from "next/headers"
-import UserMenu from "../UserMenu/UserMenu"
+import { useState } from "react"
+import ProfileImage from "../ProfileImage/ProfileImage"
+import dynamic from "next/dynamic"
+
+
 
 function Header() {
     const [Navbar, setNavbar] = useState(false)
-    const toggleNavbar = () =>{
+    /* const toggleNavbar = () =>{
         if(window.scrollY>50){
             setNavbar(true)
         }else{
@@ -22,16 +24,19 @@ function Header() {
         return(
             window.addEventListener("scroll", toggleNavbar)
         )
-    },[])
+    },[]) */
     
     const [ShowMenu, setShowMenu] = useState(false)
     const toggleShowMenu = () =>{
         setShowMenu(!ShowMenu)
     }
 
+    const UserMenuCon = dynamic(()=>import("../UserMenu/UserMenu"))
+    const [open, setOpen] = useState(false);
+
     return (
-        <header className={Navbar? 'fixed duration-200 top-0 z-[999] w-full flex justify-between items-center h-20 p-4 bg-[#ecebeb] dark:bg-[#333232]'  : 'duration-300 top-0 z-[999] w-full flex justify-between items-center  h-20 p-4'}>
-            <Link className={Navbar?"text-[#0f0] no-underline uppercase font-bold text-[1.5em]" : "text-[#0f0] no-underline uppercase font-bold text-[1.8em]"} href="/"><span>NutriSquad</span></Link>    
+        <header className={'top-0 z-[999] w-full flex justify-between items-center  h-20 p-4'}>
+            <Link className={"text-[#0f0] no-underline uppercase font-bold text-[1.8em]"} href="/"><span>NutriSquad</span></Link>    
             <nav className="hidden md:flex justify-between items-center gap-16 text-base font-medium">
                 <ul className="capitalize flex justify-between gap-6">
                     {NavLinks1.map((link)=>(
@@ -41,9 +46,15 @@ function Header() {
                     ))}
                 </ul>
             <div className="flex items-center gap-9">
-                 <div className='capitalize hover:bg-slate-300 p-1 rounded-xl hover:text-black'><Link href={"../SignIn"}> <h5>sign in</h5> </Link></div>
                 
+                {/*<div className='capitalize hover:bg-slate-300 p-1 rounded-xl hover:text-black'><Link href={"../SignIn"}> <h5>sign in</h5> </Link></div>*/}
+                <div>{open && <UserMenuCon/>}
+                    <div className='menu-trigger cursor-pointer' onClick={()=>{setOpen(!open)}}>
+                        <ProfileImage Width={40} Height={40}/>
+                    </div>
+                </div>
                 <ThemeSwitch/>
+                
             </div>
             </nav>
             <div className="md:hidden ml-auto flex items-center gap-3">
@@ -70,3 +81,10 @@ function Header() {
 }
 
 export default Header
+
+
+{
+    /* Navbar? 'fixed duration-200 top-0 z-[999] w-full flex justify-between items-center h-20 p-4 bg-[#ecebeb] dark:bg-[#333232]'  :  
+    
+        Navbar?"text-[#0f0] no-underline uppercase font-bold text-[1.5em]" : 
+    */}
