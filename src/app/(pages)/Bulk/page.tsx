@@ -1,15 +1,14 @@
-import SearchBar from "@/app/components/Search/SearchBar"
-import Filters from "@/app/components/Filters/Filters"
-import Products from "@/app/components/Products/Products"
+import axios from "axios";
 
 function Bulk() {
+    let response = axios.get("http://localhost:4000/");
+    response.then((data)=>{
+    console.log(data.data);
+})
+    
     return (
         <div className="bulk-container">
-            <div className="mt-20">
-                <SearchBar specificPlaceHolder="Search..."/>
-                <Filters/>
-            </div>
-            <Products src="/"/>
+            
         </div>
     )
 }

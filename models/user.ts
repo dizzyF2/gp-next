@@ -1,23 +1,26 @@
-import { timeStamp } from "console";
-import mongoose, { Schema, models } from "mongoose";
-/*
-video at 31:47
+// import mongoose, { Schema, models } from "mongoose";
 
-const userSchema =  new Schema({
-        email:{
-            type: String,
-            required: true,
-        },
-        password:{
-            type: String,
-            required: true,
-        },
-    }, 
-    {timestamps: true}
-);
+// /* video at 31:47 */
 
-const User = models.User || mongoose.model("User", userSchema);
+// const userSchema =  new Schema({
+//         email:{
+//             type: String,
+//             required: true,
+//             unique: true,
+//         },
+//         password:{
+//             type: String,
+//             required: false,
+//         },
+//         provider:{
+//             type: String,
+//             required: true,
+//         }
+//     }, 
+//     {timestamps: true}
+// );
 
-export default User; 
+// const User2 = models.User || mongoose.model("User", userSchema);
 
-*/
+// export default User2; 
+

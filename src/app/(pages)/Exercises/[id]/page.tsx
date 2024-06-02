@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from "react"
 import { useParams } from "next/navigation" 
-import { ExerciseOptions, fetchData } from "@/app/utils/fetchData"
+import { ExerciseOptions, fetchData, youtubeOptions } from "@/app/utils/fetchData"
 import ExerciseDetail from "@/app/components/ExerciseDetail/ExerciseDetail"
 import ExerciseVideos from "@/app/components/ExerciseVideos/ExerciseVideos"
 
+
 function ExerciseDetails() {
     const [exerciseDetail, setExerciseDetail] = useState({});
+    const [exerciseVideos, setExerciseVideos] = useState([]);
     const {id} = useParams();
 
     useEffect(()=>{
@@ -17,6 +19,10 @@ function ExerciseDetails() {
 
             const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`, ExerciseOptions);
             setExerciseDetail(exerciseDetailData);
+
+            const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`, youtubeOptions);
+            setExerciseVideos(exerciseVideosData.contents);
+
         }
         fetchExercisesData();
     }, [id]);
@@ -24,7 +30,7 @@ function ExerciseDetails() {
     return (
         <>
             <ExerciseDetail exerciceDetail={exerciseDetail}/>
-            <ExerciseVideos/>
+            <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
         </>
     )
 }

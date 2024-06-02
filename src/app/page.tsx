@@ -5,6 +5,7 @@ import TransferToRecipesList from "./components/TransferToRecipesList/TransferTo
 
 
 export default function Home() {
+  
   return (
     <main className="flex flex-col gap-40 mb-20 lg:mt-14 sm:mt-16 sm:ml-12">
       <TransferToExercises/>

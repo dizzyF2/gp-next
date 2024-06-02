@@ -1,8 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['v2.exercisedb.io'],
-        
+        remotePatterns: [
+            {
+            protocol: 'https',
+            hostname: 'i.ytimg.com',
+            port: '',
+            },
+            {
+                protocol: 'https',
+                hostname: 'v2.exercisedb.io',
+                port: '',
+            },
+            {
+                protocol: 'https',
+                hostname: 'edamam-product-images.s3.amazonaws.com',
+                port: '',
+                },
+        ],
     },
 };
 

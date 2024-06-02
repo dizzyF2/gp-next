@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function TransferToCoachesList() {
     return (
-        <div className=" mr-5 text-center">
+        <div className="w-fit m-auto mr-5">
             <h2 className="capitalize font-bold text-2xl md:text-3xl text-left mb-10 ml-10 md:ml-0">Explore and Choose your Coach for your journy</h2>
             <div className="mt-10 flex flex-col space-x-0 space-y-3 m-20 md:flex-row md:space-x-3 md:space-y-0 md:m-0 mb-0">
                 {coachReview.map((item)=>(
@@ -20,7 +20,7 @@ function TransferToCoachesList() {
                             <button className="bg-[#ff2625] uppercase rounded-lg p-2 text-sm text-white"><Link href={"/Coaches/Profile"}>more info</Link></button>
                         </div>
                     </div>
-                ))}      
+                ))}     
             </div>
             <div className="flex justify-center md:justify-end pt-2">
                     <button className="bg-[#ff2625] uppercase rounded-lg p-2 text-white"><Link href={"/Coaches"}>Show All</Link></button>

@@ -10,7 +10,8 @@ export const NavLinks1 = [
     { href: "./Recipes", key: "Recipes", text: "Recipes" },
     { href: "./Exercises", key: "Exercises", text: "Exercises" },
     { href: "./Coaches", key: "Coaches", text: "Coaches" },
-    { href: "../SignIn", key: "login", text: "login" },
+    //{ href: "../SignIn", key: "login", text: "login" },
+    //{ href: "../Slimming", key: "Slimming", text: "tttt" },
 ];
 
 export const categoryFilters = [

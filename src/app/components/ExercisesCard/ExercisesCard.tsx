@@ -6,8 +6,7 @@ import { ExerciseOptions, fetchData } from "@/app/utils/fetchData"
 import Image from "next/image"
 
 function ExercisesCard({exercises, setExercises, bodyPart}:any) {
-    console.log(exercises)
-    //const [currentPage, setCurrentPage] = useState(1);
+    
 
     useEffect(() => {
         const fetchExercisesData = async () => {
@@ -26,26 +25,12 @@ function ExercisesCard({exercises, setExercises, bodyPart}:any) {
                 // Set exercises only if exercisesData is an array
                 setExercises(exercisesData);
             } catch (error) {
-                console.error('Error fetching exercises data:', error);
+                console.error('Error fetching exercises data: ', error);
                 // Handle the error, display a message, or set a default value for exercises
             }
         };
         fetchExercisesData();
     }, [bodyPart]);
-
-    /*useEffect(() => {
-        const fetchExercisesData = async () =>{
-            let exercisesData = [];
-            if(bodyPart === 'all'){
-                exercisesData =  await fetchData('https://exercisedb.p.rapidapi.com/exercises', ExerciseOptions);
-            }else{
-                exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, ExerciseOptions);
-            }
-
-            setExercises(exercisesData);
-        }
-        fetchExercisesData();
-    },[bodyPart]) */
 
     return (
         <>

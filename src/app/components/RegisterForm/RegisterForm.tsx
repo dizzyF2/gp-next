@@ -1,24 +1,19 @@
 'use client'
 
 import Link from "next/link"
-import { FormEvent, useState } from "react"
+import { useState, FormEvent } from "react"
+import { useRouter } from "next/navigation";
 
 
 function RegisterForm() {
-    
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => { 
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const response = await  fetch(`/api/auth/register`,{
-            method:'POST',
-            body: JSON.stringify({
-                email: formData.get('email'),
-                password: formData.get('password'),
-            }),
-        });
-        console.log({response});
-    };
+    //const [email, setEmail] = useState('');
+    //const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const router = useRouter();
 
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => { 
+        
+    };
     return (
         <div className="w-full min-h-screen flex justify-center items-center bg-slate-300 dark:bg-[#18181b]">
             <div className="relative w-[380px] h-[480px]  rounded-lg overflow-hidden bg-[#a5a4a41f] dark:bg-[#333232ce] border-solid border-b-2 dark:border-[#3f3f4666]">
@@ -34,6 +29,7 @@ function RegisterForm() {
 
                             <div className="relative flex flex-col mb-8">
                                 <input
+                                
                                     name="email"
                                     type="email"
                                     id="email"
@@ -74,12 +70,12 @@ function RegisterForm() {
 
                             <div className="flex justify-center">
                             <button type="submit" className="flex justify-center items-center py-1.5 text-gray-100 bg-lime-500 w-40 
-                            rounded hover:bg-lime-600 hover-scale-105 duration-300 mb-5"><Link href={""}>Sign up</Link></button>
+                            rounded hover:bg-lime-600 hover-scale-105 duration-300 mb-5">Sign up</button>
                             </div>
                             
 
                             <p className="text-gray-500">already have an account? 
-                            <Link href="../SignIn" className="ml-1 text-lime-500 hover:underline">Log in</Link>
+                            <Link href="../Login" className="ml-1 text-lime-500 hover:underline">Log in</Link>
                             </p>
 
                     </form>
@@ -90,3 +86,59 @@ function RegisterForm() {
 }
 
 export default RegisterForm
+
+
+/*
+    //const [email, setEmail] = useState('');
+    //const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const router = useRouter();
+
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => { 
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+
+        if(!formData.get('email') || !formData.get('password')){
+            setError("All field are necessary.");
+            return;
+        }
+
+        try {
+            const responseUserExist = await fetch(`/api/auth/userExists`, {
+                method:'POST',
+                headers:{
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email: formData.get('email') }),
+            })
+            
+            const { user } = await responseUserExist.json();
+
+            if(user){
+                setError("User already Exists.")
+                return;
+            }
+
+            const response = await  fetch(`/api/auth/register`,{
+                method:'POST',
+                body: JSON.stringify({
+                    email: formData.get('email'),
+                    password: formData.get('password'),
+                }),
+            });
+            
+            if(response.ok){
+                const form = e.currentTarget;
+                form.reset();
+                router.push("/")
+            }else{
+                console.log("user registeration failed.");
+            }
+
+            console.log({response});
+        } catch (error) {
+            console.log("Error during registeration: ", error);
+        }
+        
+    };
+    */

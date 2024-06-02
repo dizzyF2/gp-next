@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function TransferToRecipesList() {
     return (
-        <div className=" mr-5 text-center">
+        <div className=" mr-5 text-center m-auto">
             <h2 className="capitalize font-bold text-2xl md:text-3xl text-left mb-10 ml-10 md:ml-0">Explore Healthy Recipes </h2>
             <div className="mt-10 flex flex-col space-x-0 space-y-3 m-20 md:flex-row md:space-x-3 md:space-y-0 md:m-0 mb-0">
                 {RecipesReview.map((item)=>(

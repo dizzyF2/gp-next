@@ -1,10 +1,13 @@
-import RegisterForm from "@/app/components/RegisterForm/RegisterForm";
+import AuthForm from "@/app/components/AuthForm";
 
 
 
-export default function SignUp() {
 
+
+async function Register() {
     return (
-        <RegisterForm/>
+        <AuthForm type="sign-up"/>
     )
 }
+
+export default Register
