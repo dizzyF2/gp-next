@@ -1,38 +1,18 @@
-'use client'
-
-import { useState, useEffect } from "react"
-import { useParams } from "next/navigation" 
-import { ExerciseOptions, fetchData, youtubeOptions } from "@/app/utils/fetchData"
-import ExerciseDetail from "@/app/components/ExerciseDetail/ExerciseDetail"
-import ExerciseVideos from "@/app/components/ExerciseVideos/ExerciseVideos"
+import { redirect, useParams } from "next/navigation" 
+import { getCurrentUser } from "../../../../../lib/appwrite"
+import ExerciseDetails from "@/app/components/ExerciseDetails"
 
 
-function ExerciseDetails() {
-    const [exerciseDetail, setExerciseDetail] = useState({});
-    const [exerciseVideos, setExerciseVideos] = useState([]);
-    const {id} = useParams();
+async function ExerciseDetailsPage() {
 
-    useEffect(()=>{
-        const fetchExercisesData = async () =>{
-            const exerciseDbUrl = 'https://exercisedb.p.rapidapi.com';
-            const youtubeSearchUrl = 'https://youtube-search-and-download.p.rapidapi.com';
-
-            const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`, ExerciseOptions);
-            setExerciseDetail(exerciseDetailData);
-
-            const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`, youtubeOptions);
-            setExerciseVideos(exerciseVideosData.contents);
-
-        }
-        fetchExercisesData();
-    }, [id]);
+    const user = await getCurrentUser()
+    if(!user){
+        redirect("/Login")
+    }
 
     return (
-        <>
-            <ExerciseDetail exerciceDetail={exerciseDetail}/>
-            <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
-        </>
+        <ExerciseDetails/>
     )
 }
 
-export default ExerciseDetails
+export default ExerciseDetailsPage

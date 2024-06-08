@@ -2,7 +2,6 @@
 //rapid api exercises DB
 export const ExerciseOptions = {
     method: 'GET',
-    params: {limit: '50'},
     headers: {
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
         'X-RapidAPI-Key':process.env.NEXT_PUBLIC_EXERCISE_RAPID_API_KEY

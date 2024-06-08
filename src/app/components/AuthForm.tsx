@@ -15,8 +15,6 @@ import { redirect } from "next/navigation";
 
 
 
-
-
 function AuthForm({type}:{type:string}) {
 
     const [user, setUser] = useState(null);
@@ -86,9 +84,9 @@ function AuthForm({type}:{type:string}) {
                 <div className="absolute w-full inset-1 rounded-lg z-10 p-5 bg-gray-200 dark:bg-[#333232] border-solid border-b-2 dark:border-[#3f3f4666]">
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className=" flex flex-col gap-1">
-                        <h2 className="text-x1 font-semibold text-lime-500 text-center mb-12">
-                            { type === 'sign-in' ? 'Sign-in' : 'Sign-up'}
-                        </h2>
+                            <h2 className="text-x1 font-semibold text-lime-500 text-center mb-12">
+                                { type === 'sign-in' ? 'Sign-in' : 'Sign-up'}
+                            </h2>
                             { type === 'sign-up' && (
                                 <>
                                     <div className="flex gap-4">
@@ -113,7 +111,7 @@ function AuthForm({type}:{type:string}) {
                                     />
                                 </>
                             )}
-                        <CustomInput
+                            <CustomInput
                                 control={form.control}
                                 name={"email"}
                                 label={"Email"}
@@ -126,23 +124,22 @@ function AuthForm({type}:{type:string}) {
                                 placeholder={"Enter your Password"}
                             />
                             <Button disabled={isLoading} type="submit" className="py-1.5 text-gray-100 bg-lime-500 w-full 
-                        rounded hover:bg-lime-600 hover-scale-105 duration-300">{isLoading ? (
-                            <>
-                                <Loader2 size={20} className="animate-spin"/> &nbsp; Loading...
-                            </>
-
-                        ) : type === 'sign-in' ? 'Sign-in' : 'Sign-up'}
-                        </Button>
-                        <div className="flex flex-row gap-0 mt-1">
-                            <p className="text-gray-500">
-                                {type === 'sign-in' ? "Don't have an account?" : "Already have an account?"}
-                            </p>
-                            <Link href={type === 'sign-in' ? '../Register' : '../Login'} 
-                            className="ml-1 text-lime-500 hover:underline"
-                            >
-                                {type === 'sign-in' ? 'Sign up' : 'Sign in'}
-                            </Link>
-                        </div>
+                                rounded hover:bg-lime-600 hover-scale-105 duration-300">{isLoading ? (
+                                    <>
+                                        <Loader2 size={20} className="animate-spin"/> &nbsp; Loading...
+                                    </>
+                                ) : type === 'sign-in' ? 'Sign-in' : 'Sign-up'}
+                            </Button>
+                            <div className="flex flex-row gap-0 mt-1">
+                                <p className="text-gray-500">
+                                    {type === 'sign-in' ? "Don't have an account?" : "Already have an account?"}
+                                </p>
+                                <Link href={type === 'sign-in' ? '../Register' : '../Login'} 
+                                className="ml-1 text-lime-500 hover:underline"
+                                >
+                                    {type === 'sign-in' ? 'Sign up' : 'Sign in'}
+                                </Link>
+                            </div>
                         </form>
                     </Form>
                     <div></div>

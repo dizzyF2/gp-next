@@ -38,6 +38,11 @@ function RecipesProduct() {
             e.preventDefault()
             fetchRecipe()
         }
+
+        const resetquery = async () =>{
+            setQuery("vega");
+            fetchRecipe()
+        }
     
         const showMore = () => {
             setLimit(prev => prev + 10)
@@ -59,7 +64,7 @@ function RecipesProduct() {
 
 
     return (
-        <>
+        <div className="flex flex-col justify-center items-center">
             <div className='w-full flex  items-center justify-center pt-10 pb-5 px-0 md:px-10'>
                 <form className='w-full flex justify-center lg:w-2/4' onSubmit={handleSearchedRecipe}>
                     <RecipeSearchBar placeholder="eg. Cake, Vegan, Chicken"
@@ -68,6 +73,7 @@ function RecipesProduct() {
                     <button className="bg-[#FF2625] p-1 rounded-lg text-white" onClick={handleSearchedRecipe}>Search</button>
                 </form>
             </div>
+            <button className=" bg-[#FF2625] p-2 px-5 rounded-lg text-white" onClick={resetquery}>All</button>
             {
                 recipes?.length > 0 ? (
                     <>
@@ -89,11 +95,11 @@ function RecipesProduct() {
                             </button>
                         </div>
                     </>
-                ) : <div className='text-white w-full items-center justify-center py-10'>
-                    <p className='text-center'>No Recipe Found</p>
+                ) : <div className='text-black dark:text-white w-full font-bold items-center justify-center py-10'>
+                    <p className='text-center '>No Recipe Found</p>
                 </div>
             }
-        </>
+        </div>
     )
 }
 

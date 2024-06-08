@@ -9,9 +9,31 @@ export const NavLinks = [
 export const NavLinks1 = [
     { href: "./Recipes", key: "Recipes", text: "Recipes" },
     { href: "./Exercises", key: "Exercises", text: "Exercises" },
-    { href: "./Coaches", key: "Coaches", text: "Coaches" },
+    //{ href: "./Coaches", key: "Coaches", text: "Coaches" },
     //{ href: "../SignIn", key: "login", text: "login" },
     //{ href: "../Slimming", key: "Slimming", text: "tttt" },
+];
+
+export const ExerciseImages = [
+    {
+        src:"/HomeExercisesSection/exercise1.jpg", 
+        name:"image1"
+    },
+
+    {
+        src:"/HomeExercisesSection/exercise2.jpg", 
+        name:"imag2"
+    },
+
+    {
+        src:"/HomeExercisesSection/exercise3.jpg", 
+        name:"image3"
+    },
+
+    {
+        src:"/HomeExercisesSection/exercise4.jpg", 
+        name:"image4"
+    },
 ];
 
 export const categoryFilters = [
@@ -35,7 +57,7 @@ export const recipesFilters = [
     {key: "Fruit", filter: "Fruit" },
     {key: "Carps", filter: "Carps" },
     {key: "Protiens", filter: "Protiens" },
-    ];
+];
 
 export const trainerFilters = [
     {key: "Gym", filter: "Gym" },
@@ -50,7 +72,6 @@ export const all = [
     {key: "Healthy", filter: "Healthy recipes" },
     {key: "nutrinational", filter: "nutrinational healthy fears" },
 ];
-
 
 export const productImages = [
     {src:'/public/images/11.webp', key:"food", title:"food"},
@@ -82,7 +103,7 @@ export const coachReview = [
         img:"/CoachesList/SimonRobben.jpg",
         review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
     },
-    ];
+];
 
 export const CoachesList = [
     {
@@ -139,7 +160,7 @@ export const CoachesList = [
         img:"/CoachesList/Vince-veras.jpg",
         review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores ducimus laboriosam perferendis in dolor architecto distinctio quo delectus incidunt vel,"
     },
-    ];
+];
 
 export const RecipesCardInfo = [
     {

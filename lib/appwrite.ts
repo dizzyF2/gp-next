@@ -40,7 +40,6 @@ export async function createAdminClient() {
     }
     };
 }
-
 export async function getCurrentUser() {
     try {
     const { account } = await createSessionClient();

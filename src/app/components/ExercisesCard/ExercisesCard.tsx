@@ -52,6 +52,7 @@ function ExercisesCard({exercises, setExercises, bodyPart}:any) {
                                 <Link className="flex text-[#4489b8] hover:text-[#1f1fe4c4] font-medium dark:text-[#5dbcfc] dark:hover:text-[#4ab1f5ea] duration-300 text-lg" href={`/Exercises/${exercise.id}`}>Details <ArrowRight className="self-center" size={15} /></Link>
                             </div>
                     </div>
+                    
                 ))}
             </div>
         </>

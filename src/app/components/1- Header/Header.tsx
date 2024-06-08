@@ -9,7 +9,6 @@ import UserAvatar from "../UserAvatar"
 async function Header() {
     
     const user = await getCurrentUser();
-    console.log("from header ", user)
 
     return (
         <header className={'top-0 z-[999] w-full flex justify-between items-center h-20 p-4'}>
