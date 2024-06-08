@@ -1,21 +1,16 @@
-'use client'
-import ExercisesCard from "@/app/components/ExercisesCard/ExercisesCard";
-import SearchExercises from "@/app/components/SearchExercises/SearchExercises"
-import { useState } from "react";
+import { redirect } from "next/navigation";
+import { getCurrentUser } from "../../../../lib/appwrite";
+import ExercisesList from "@/app/components/ExercisesList";
 
 
-function Exercises() {
-    const [bodyPart, setBodyPart] = useState<string[]>(['all']);
-    const [exercises, setExercises] = useState([]);
-
+async function Exercises() {
+    const user = await getCurrentUser()
+    if(!user){
+        redirect("/Login")
+    }
 
     return (
-        <div className="exercises-container" id="Exercises">
-            <div className="mt-20">
-                <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
-            </div>
-            <ExercisesCard exercise={exercises} exercises={exercises} setExercises={setExercises} bodyPart={bodyPart}/>
-        </div>
+        <ExercisesList/>
     )
 }
 

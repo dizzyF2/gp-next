@@ -4,16 +4,15 @@ import { redirect } from "next/navigation";
 
 
 
-
-
-async function Register() {
+async function Login() {
     const user = await getCurrentUser()
     if(user){
         redirect("/")
     }
+    
     return (
-        <AuthForm type="sign-up"/>
+        <AuthForm type="sign-in"/>
     )
 }
 
-export default Register
+export default Login

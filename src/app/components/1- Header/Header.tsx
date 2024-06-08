@@ -1,42 +1,20 @@
-'use client'
-
 import Link from "next/link"
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch"
 import {NavLinks1 } from "@/app/constants"
-import { Menu } from "lucide-react"
-import { useState } from "react"
-import ProfileImage from "../ProfileImage/ProfileImage"
-import dynamic from "next/dynamic"
+import MobileHeader from "../MobileHeader"
+import { getCurrentUser } from "../../../../lib/appwrite"
+import UserAvatar from "../UserAvatar"
 
 
-
-function Header() {
-    const [Navbar, setNavbar] = useState(false)
-    /* const toggleNavbar = () =>{
-        if(window.scrollY>50){
-            setNavbar(true)
-        }else{
-            setNavbar(false)
-        }
-    }
-    useEffect(()=>{
-        window.addEventListener("scroll", toggleNavbar)
-        return(
-            window.addEventListener("scroll", toggleNavbar)
-        )
-    },[]) */
+async function Header() {
     
-    const [ShowMenu, setShowMenu] = useState(false)
-    const toggleShowMenu = () =>{
-        setShowMenu(!ShowMenu)
-    }
-
-    const UserMenuCon = dynamic(()=>import("../UserMenu/UserMenu"))
-    const [open, setOpen] = useState(false);
+    const user = await getCurrentUser();
 
     return (
-        <header className={'top-0 z-[999] w-full flex justify-between items-center  h-20 p-4'}>
+        <header className={'top-0 z-[999] w-full flex justify-between items-center h-20 p-4'}>
+            {/* LOGO link */}
             <Link className={"text-[#0f0] no-underline uppercase font-bold text-[1.8em]"} href="/"><span>NutriSquad</span></Link>    
+            {/* Pages links */}
             <nav className="hidden md:flex justify-between items-center gap-16 text-base font-medium">
                 <ul className="capitalize flex justify-between gap-6">
                     {NavLinks1.map((link)=>(
@@ -45,37 +23,22 @@ function Header() {
                         </Link>
                     ))}
                 </ul>
-            <div className="flex items-center gap-9">
-                
-                {/*<div className='capitalize hover:bg-slate-300 p-1 rounded-xl hover:text-black'><Link href={"../SignIn"}> <h5>sign in</h5> </Link></div>*/}
-                <div>{open && <UserMenuCon/>}
-                    <div className='menu-trigger cursor-pointer' onClick={()=>{setOpen(!open)}}>
-                        <ProfileImage Width={40} Height={40}/>
-                    </div>
-                </div>
-                <ThemeSwitch/>
-                
-            </div>
             </nav>
-            <div className="md:hidden ml-auto flex items-center gap-3">
-            <div className=" cursor-pointer hover:bg-slate-300 rounded-full p-2 duration-200" onClick={toggleShowMenu}><Menu size={20} color="black"/></div>
-            <div><ThemeSwitch/></div>
-            </div>
-            <div className="absolute md:hidden z-[10000] left-0 top-20 w-full">
-            {ShowMenu &&
-                <div className="flex flex-col items-center gap-2 rounded-b-lg bg-[#fcfcfcc5] dark:bg-[#302f2fb4]">
-                    <ul className="capitalize flex flex-col gap-2 items-center mt-3">
-                        {NavLinks1.map((link)=>(
-                            <Link className="hover:bg-[#ff2625] p-1 rounded-xl hover:text-white" href={link.href} key={link.key}>
-                                {link.text}
-                            </Link>
-                        ))}
-                    </ul>
-                    <div className='capitalize hover:bg-[#ff2625] p-1 rounded-xl hover:text-white mb-3'><Link href={"../SignIn"}> <h5>sign in</h5> </Link></div>
-                </div> 
-            }
+            {/* LOGIN / ThemeSwitch */}
+            <div className="hidden md:flex items-center gap-9">
+                {user ? 
+                <>
+                    <UserAvatar/>
+                </> 
+                : <>
+                    <div className='capitalize hover:bg-slate-300 p-1 rounded-xl hover:text-black'><Link href={"/Login"}> <h5>login</h5> </Link></div>
+                </>
+                }
+
+                <ThemeSwitch/>
             </div>
             
+            <MobileHeader/>
         </header>
     )
 }

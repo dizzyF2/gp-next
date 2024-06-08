@@ -6,8 +6,7 @@ import { ExerciseOptions, fetchData } from "@/app/utils/fetchData"
 import Image from "next/image"
 
 function ExercisesCard({exercises, setExercises, bodyPart}:any) {
-    console.log(exercises)
-    //const [currentPage, setCurrentPage] = useState(1);
+    
 
     useEffect(() => {
         const fetchExercisesData = async () => {
@@ -26,26 +25,12 @@ function ExercisesCard({exercises, setExercises, bodyPart}:any) {
                 // Set exercises only if exercisesData is an array
                 setExercises(exercisesData);
             } catch (error) {
-                console.error('Error fetching exercises data:', error);
+                console.error('Error fetching exercises data: ', error);
                 // Handle the error, display a message, or set a default value for exercises
             }
         };
         fetchExercisesData();
     }, [bodyPart]);
-
-    /*useEffect(() => {
-        const fetchExercisesData = async () =>{
-            let exercisesData = [];
-            if(bodyPart === 'all'){
-                exercisesData =  await fetchData('https://exercisedb.p.rapidapi.com/exercises', ExerciseOptions);
-            }else{
-                exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, ExerciseOptions);
-            }
-
-            setExercises(exercisesData);
-        }
-        fetchExercisesData();
-    },[bodyPart]) */
 
     return (
         <>
@@ -67,6 +52,7 @@ function ExercisesCard({exercises, setExercises, bodyPart}:any) {
                                 <Link className="flex text-[#4489b8] hover:text-[#1f1fe4c4] font-medium dark:text-[#5dbcfc] dark:hover:text-[#4ab1f5ea] duration-300 text-lg" href={`/Exercises/${exercise.id}`}>Details <ArrowRight className="self-center" size={15} /></Link>
                             </div>
                     </div>
+                    
                 ))}
             </div>
         </>

@@ -1,5 +1,4 @@
 import CoachesProfileList from "@/app/components/CoachesProfileList/CoachesProfileList"
-import SearchBar from "@/app/components/Search/SearchBar"
 import { trainerFilters } from "@/app/constants"
 import "../../components/Filters/filters.css"
 
@@ -8,7 +7,7 @@ function Coaches() {
     return (
         <div className="coaches-container">
             <div className="mt-20">
-                <SearchBar specificPlaceHolder="search for coach"/>
+                {/*<SearchBar specificPlaceHolder="search for coach"/> */}
                 <div className="filters">
                     <button className="active cursor-pointer">
                         All
