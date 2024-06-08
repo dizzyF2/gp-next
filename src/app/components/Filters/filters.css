@@ -27,6 +27,7 @@
     border-radius: 5px;
     transition: 0.3s;
     width: 150px;
+    cursor: pointer;
 }
 
 .filters button:hover{

@@ -1,10 +1,19 @@
-import RegisterForm from "@/app/components/RegisterForm/RegisterForm";
+import AuthForm from "@/app/components/AuthForm";
+import { getCurrentUser } from "../../../../lib/appwrite";
+import { redirect } from "next/navigation";
 
 
 
-export default function SignUp() {
 
+
+async function Register() {
+    const user = await getCurrentUser()
+    if(user){
+        redirect("/")
+    }
     return (
-        <RegisterForm/>
+        <AuthForm type="sign-up"/>
     )
 }
+
+export default Register
