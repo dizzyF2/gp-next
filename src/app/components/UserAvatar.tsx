@@ -40,7 +40,6 @@ const UserAvatar = async () => {
             <DropdownMenuSeparator />
             <DropdownMenuLabel className="hover:text-[#ff2625] cursor-pointer flex gap-3"><CircleUser size={20}/> <Link href={`/UserProfile/${user?.$id}`}>My profile</Link></DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem><div className="hover:text-[#ff2625] cursor-pointer flex gap-3"><Settings size={20}/> Settings</div></DropdownMenuItem>
             <DropdownMenuItem > <LogoutButton/> </DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>
