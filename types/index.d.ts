@@ -75,6 +75,7 @@ declare interface signInProps {
     password: string;
 }
 
+
 declare interface getUserInfoProps {
     userId: string;
 }
