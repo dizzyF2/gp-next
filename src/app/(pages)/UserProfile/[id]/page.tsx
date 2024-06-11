@@ -8,12 +8,12 @@ async function User() {
     }
     return(
         <div className='flex flex-col gap-5'>
-            <>
+            <div>
                 {user?.name}
-            </>
-            <>
-                {user?.$id}
-            </>
+            </div>
+            <div>
+                {user?.email}
+            </div>
         </div>
     )
 }

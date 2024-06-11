@@ -747,3 +747,5 @@ export const gymInf = [
                 Image: "/public/protienImg/p40.png"
             },
             ];
+
+
