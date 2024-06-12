@@ -1,7 +1,4 @@
 'use client';
-
-import { RecipesReview } from "@/app/constants"
-import Image from "next/image"
 import Link from "next/link"
 import Loading from "../Loading";
 import { useEffect, useState } from "react";
@@ -55,7 +52,7 @@ function TransferToRecipesList() {
         );
     }
     return (
-        <div className="text-center">
+        <div className="text-center mx-auto">
             <h2 className="capitalize font-bold text-2xl md:text-3xl text-left mb-10 ml-10 md:ml-0">Explore Healthy Recipes </h2>
             <div className="flex flex-col w-fit">
                 <div className="mt-10 flex flex-col space-x-0 space-y-3 m-20 md:flex-row md:space-x-3 md:space-y-0 md:m-0 mb-0">
