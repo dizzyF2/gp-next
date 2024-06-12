@@ -495,6 +495,39 @@ export const gymInf = [
         },
 ];
 
+export const toGymList = [
+    {
+        title: "Gold's Gym Alexandria Club",
+        links: ["Facebook", "Location"],
+        srcFace: "https://web.facebook.com/GoldsGymAlexClub/?_rdc=1&_rdr",
+        srcLocation: "https://g.co/kgs/PoVvbFT",
+        Image: "/gymImg/g6.jpg"
+    },
+    {
+        title: "Reform gym",
+        links: ["Facebook", "Instagram", "Location"],
+        srcFace: "https://www.facebook.com/ReformGym/",
+        srcInsta: "https://www.instagram.com/reform.gym/?hl=ar",
+        srcLocation: "https://g.co/kgs/8tvyyge",
+        Image: "/gymImg/g7.jpg"
+    },
+    {
+        title: "Silver gym",
+        links: ["Facebook", "Location"],
+        srcFace: "https://web.facebook.com/Silver.Gym2016/?locale=ar_AR&_rdc=1&_rdr",
+        srcLocation: "https://g.co/kgs/bgLqhhh",
+        Image: "/gymImg/g8.jpg"
+    },
+    {
+        title: "Planet Gym Kafr Abdo",
+        links: ["Facebook", "Instagram", "Location"],
+        srcFace: "https://web.facebook.com/PlanetGymKafrAbdo/?locale=ar_AR&_rdc=1&_rdr",
+        srcInsta: "https://www.instagram.com/planetgymkafrabdo/?hl=ar",
+        srcLocation: "https://g.co/kgs/goQQNRn",
+        Image: "/gymImg/g10.jpg"
+    }
+];
+
 export const protienInf = [
     {
         title: "platinum creatine 80 servings 5g creatine UNFLAVORED NETWT 14.11 OZ (400G)",
@@ -748,6 +781,33 @@ export const protienInf = [
         src1: "https://ifit-eg.com/product/challenger-nutrition-l-glutamine/",
         Image: "/protienImg/p40.png"
     },
+];
+
+export const toProteinList = [
+    {
+        title: "Muscle Add | Whey ADD | 25g Protein | Hydrolyzed | Isolate | Concentrate | 140 calories | Enhanced Formula | Long-lasting Nutrition | BCAA | Glutamine | 60 servings | 2100g | Chocolate Ice-cream",
+        links: "Amazon",
+        src1: "https://www.amazon.eg/Muscle-Add-Hydrolyzed-Concentrate-Long-lasting/dp/B09GMRKG91/ref=lp_21858222031_1_12?pf_rd_p=78aae7d6-8af7-4452-9c4f-e424a540062d&pf_rd_r=N1XHVVEKB8D4DBTG99FJ&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D",
+        Image: "/protienImg/p28.jpg"
+    },
+    {
+        title: "ISO100 Gourmet Chocolate (2.3kg)",
+        links: "Amazon",
+        src1: "https://www.amazon.eg/-/en/Dymatize-2060470-ISO100-Gourmet-Chocolate/dp/B000GOY7FO/ref=sr_1_20?dib=eyJ2IjoiMSJ9.LhqvGhIWpOTxbBifBiXRt0fXzkeLzk2V8m25gHAsW3zFgnfXg1thku4dS2P_JQCps1LHyACwlx7LydFIdaudx1op30NJRwg9hfrdKSg14Qt3p3jyE31MmCORb8suVOwuUh0GQT6f3xarmIBZ_AMdXD57vJYmyJ1EVGyMk33-E9afuTG6udUeDVGy0fR6tsbBD4zqY9n7IPJf6IP0m7vJTa-LTL8gRB_CdowSxzBKgQNkLvPPbff9JXuJoQnEywJ7ItzsEPrlFcHL4svUp-hVhwlR4jo_2HN8R7gDECejYko.4YocIneKcyFZf2WLmqYCCO1QwAymWjlk7uW5kNwgmE8&dib_tag=se&qid=1718021232&s=health&sr=1-20",
+        Image: "/protienImg/p29.jpg"
+    },
+    {
+        title: "Optimum Nutrition Gold Standard 100% Isolate Whey",
+        links: "Ifit-EG",
+        src1: "https://ifit-eg.com/product/optimum-nutrition-gold-standard-100-isolate-whey/",
+        Image: "/protienImg/p30.png"
+    },
+    {
+        title: "Isopure Protein – Flavored",
+        links: "Ifit-EG",
+        src1: "https://ifit-eg.com/product/isopure-protein-flavored/",
+        Image: "/protienImg/p31.png"
+    }
 ];
 
 

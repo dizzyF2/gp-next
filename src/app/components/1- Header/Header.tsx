@@ -18,7 +18,7 @@ async function Header() {
             <nav className="hidden md:flex justify-between items-center gap-16 text-base font-medium">
                 <ul className="capitalize flex justify-between gap-6">
                     {NavLinks1.map((link)=>(
-                        <Link className="hover:bg-slate-300 p-1 rounded-xl hover:text-black" href={link.href} key={link.key}>
+                        <Link className="hover:bg-[#ff2625] p-3 rounded-xl hover:text-white" href={link.href} key={link.key}>
                             {link.text}
                         </Link>
                     ))}
@@ -26,14 +26,14 @@ async function Header() {
             </nav>
             {/* LOGIN / ThemeSwitch */}
             <div className="hidden md:flex items-center gap-9">
-                {user ? 
+                {/* {user ? 
                 <>
                     <UserAvatar/>
                 </> 
                 : <>
                     <div className='capitalize hover:bg-slate-300 p-1 rounded-xl hover:text-black'><Link href={"/Login"}> <h5>login</h5> </Link></div>
                 </>
-                }
+                } */}
 
                 <ThemeSwitch/>
             </div>

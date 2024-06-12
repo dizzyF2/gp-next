@@ -15,8 +15,8 @@ function GymList() {
                     <div className="card-info p-4">
                         <h2 className="title dark:text-[#f4f4f5] font-extrabold">{item.title}</h2>
                         <div className=" subtitle dark:text-[#a1a1aa] flex ">
-                            <Link href={`${item.srcInsta}`} className="dark:text-[#a1a1aa] flex  p-2 hover:text-l hover:font-bold" ><Facebook className="text-blue-600 hover:text-blue-900" size={35}/></Link>
-                            <Link href={`${item.srcFace}`} className="dark:text-[#a1a1aa] flex  p-2 hover:text-l hover:font-bold" ><Instagram className="text-pink-600 hover:text-pink-800" size={35}/></Link>
+                            <Link href={`${item.srcFace}`} className="dark:text-[#a1a1aa] flex  p-2 hover:text-l hover:font-bold" ><Facebook className="text-blue-600 hover:text-blue-900" size={35}/></Link>
+                            <Link href={`${item.srcInsta}`} className="dark:text-[#a1a1aa] flex  p-2 hover:text-l hover:font-bold" ><Instagram className="text-pink-600 hover:text-pink-800" size={35}/></Link>
                         </div>
                         <div className="flex justify-start">
                             <Link  href={`${item.srcLocation}`} className="dark:text-[#a1a1aa] flex  p-2 hover:text-l hover:font-bold" ><MapPin className="text-blue-400 hover:text-blue-900" size={25}/></Link>
