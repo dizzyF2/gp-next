@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 async function UserProfile() {
     const user = await getCurrentUser()
     if(!user){
-        redirect("/Login")
+        redirect("/")
     }
     
     return (

@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 
 async function Register() {
     const user = await getCurrentUser()
-    if(user){
+    if(!user){
         redirect("/")
     }
     return (

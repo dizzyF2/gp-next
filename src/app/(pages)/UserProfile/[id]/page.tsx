@@ -4,7 +4,7 @@ import { getCurrentUser } from '../../../../../lib/appwrite'
 async function User() {
     const user = await getCurrentUser()
     if(!user){
-        redirect("/Login")
+        redirect("/")
     }
     return(
         <div className='flex flex-col gap-5'>
