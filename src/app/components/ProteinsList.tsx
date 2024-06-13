@@ -17,6 +17,7 @@ function ProteinsList() {
                     
                         <Link 
                         href={`${item.src1}`}
+                        target="_blank"
                         className="dark:text-[#a1a1aa] flex  p-2 hover:text-l hover:font-bold items-baseline hover:text-xl" 
                         >
                             <h1 className="hover:cursor-pointer">{item.links}</h1>
