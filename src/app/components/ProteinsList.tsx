@@ -21,7 +21,7 @@ function ProteinsList() {
                         className="dark:text-[#a1a1aa] flex  p-2 hover:text-l hover:font-bold items-baseline hover:text-xl" 
                         >
                             <h1 className="hover:cursor-pointer">{item.links}</h1>
-                            <h1 className="text-2xl">🛒</h1>
+                            <h1 className="text-env2xl">🛒</h1>
                         </Link>
                     </div>
                 </div>
