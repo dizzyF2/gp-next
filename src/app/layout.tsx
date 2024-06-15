@@ -4,7 +4,6 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Header from "./components/1- Header/Header";
 import Footer from "./components/2- Footer/Footer";
-import Chatbox from "./components/chatbox/Chatbox";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en"  suppressHydrationWarning>
+      <body className={`${inter.className} pt-20 bg-[#eeebeb] dark:bg-[#18181b]`}>
         <Providers>
           <Header/>
           {children}
