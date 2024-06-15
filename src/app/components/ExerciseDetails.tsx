@@ -29,7 +29,7 @@ function ExerciseDetails() {
     return (
         <>
             <ExerciseDetail exerciceDetail={exerciseDetail}/>
-            <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
+            <ExerciseVideos exerciseVideos={exerciseVideos} />
         </>
     )
 }

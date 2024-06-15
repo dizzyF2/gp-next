@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 
-function ExerciseVideos({exerciseVideos, name}:any) {
+function ExerciseVideos({exerciseVideos}:any) {
 
     console.log(exerciseVideos);
 
@@ -10,7 +10,7 @@ function ExerciseVideos({exerciseVideos, name}:any) {
 
     return (
     <div className="lg:mt-36 mt-1 p-5 flex-col justify-center items-center">
-        <h1 className="mb-8 lg:text-5xl capitalize text-3xl">Watch <span className="text-[#ff262f]">{name}</span> exercise Videos</h1>
+        <h1 className="mb-8 lg:text-5xl capitalize text-3xl">Watch <span className="text-[#ff262f]">Tutorial videos</span> about this Exercise</h1>
         <div className="flex justify-center lg:justify-start flex-wrap items-center lg:flex-row lg:gap-[110px] sm:gap-1">
             {exerciseVideos?.slice(0,6).map((item:any, index:any) =>(
                 <Link key={index} 
