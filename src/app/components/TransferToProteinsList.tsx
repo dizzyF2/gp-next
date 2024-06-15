@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { toProteinList } from "../constants"
 import Image from "next/image"
-import "../components/Products/Products.css"
 
 
 function TransferToProteinsList() {
