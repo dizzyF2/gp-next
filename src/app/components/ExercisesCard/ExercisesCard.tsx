@@ -1,5 +1,4 @@
 import Link from "next/link"
-import "../Products/products.css"
 import { ArrowRight } from "lucide-react"
 import { useEffect } from "react"
 import { ExerciseOptions, fetchData } from "@/app/utils/fetchData"
@@ -34,18 +33,18 @@ function ExercisesCard({exercises, setExercises, bodyPart}:any) {
 
     return (
         <>
-            <div className="product-container" id="exercises">
+            <div className="flex flex-wrap justify-center p-[10px] gap-x-4 gap-y-8 mt-[25px] mb-[50px]" id="exercises">
                 {exercises.map((exercise:any, index:any) =>(
-                    <div key={index} className="card flex flex-col justify-between rounded-md dark:border-[#5dbcfc4d] dark:border-2 dark:hover:border-[#5dbcfc] bg-gradient-to-t from-[#7c7a7a18] to-[#7c7a7a18] dark:bg-gradient-to-t dark:from-[#ffffff0d] dark:to-[#ffffff0d]">
+                    <div key={index} className="w-fit border-2 border-solid border-[rgba(95, 189, 252, 0.302);] hover:border-[var(--blue);] hover:scale-105 duration-300 flex flex-col justify-between rounded-md dark:border-[#5dbcfc4d] dark:border-2 dark:hover:border-[#5dbcfc] bg-gradient-to-t from-[#7c7a7a18] to-[#7c7a7a18] dark:bg-gradient-to-t dark:from-[#ffffff0d] dark:to-[#ffffff0d]">
                         <Image className="flex items-center justify-center w-72 rounded-t-md" src={exercise.gifUrl} width={150} height={150} alt={exercise.name} loading="lazy"/>
-                        <div className="card-info">
+                        <div className="w-[200px] py-[1rem] px-[0.4rem]">
                             <button className="mb-2 mr-1 text-white bg-[#ffa9a9] text-sm rounded-xl capitalize p-2">
                                 {exercise.bodyPart}
                             </button>
                             <button className="mb-2 mr-1 text-white bg-[#fcc757] text-sm rounded-xl capitalize p-2">
                                 {exercise.target}
                             </button>
-                            <h2 className="title dark:text-[#f4f4f5] font-bold text-[22px]">{exercise.name}</h2>
+                            <h2 className="dark:text-[#f4f4f5] font-bold text-[22px]">{exercise.name}</h2>
                             
                         </div>
                             <div className="flex justify-end mb-2 mr-2">

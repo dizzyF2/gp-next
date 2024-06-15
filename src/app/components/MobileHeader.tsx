@@ -20,11 +20,10 @@ function MobileHeader() {
                 {ShowMenu &&
                     <div className="p-3 flex flex-col items-center gap-2 rounded-b-lg bg-[#fcfcfcc5] dark:bg-[#302f2fb4]">
                         <ul className="capitalize flex flex-col gap-2 items-center mt-3">
-                            {NavLinks1.map((link)=>(
-                                <Link className="hover:bg-[#ff2625] p-1 rounded-xl hover:text-white" href={link.href} key={link.key}>
-                                    {link.text}
-                                </Link>
-                            ))}
+                            <Link href="/Recipes" className="hover:bg-[#ff2625] p-3 rounded-xl hover:text-white">Recipes</Link>
+                            <Link href="/Exercises" className="hover:bg-[#ff2625] p-3 rounded-xl hover:text-white">Exercises</Link>
+                            <Link href="/Gym" className="hover:bg-[#ff2625] p-3 rounded-xl hover:text-white">Gym</Link>
+                            <Link href="/Proteins" className="hover:bg-[#ff2625] p-3 rounded-xl hover:text-white">Proteins</Link>
                         </ul>
                         {/* <div className='capitalize hover:bg-[#ff2625] p-1 rounded-xl hover:text-white mb-3'><Link href={"../SignIn"}> <h5>sign in</h5> </Link></div> */}
                     </div> 
