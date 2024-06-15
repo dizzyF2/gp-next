@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { NavLinks1 } from '../constants'
 import ThemeSwitch from './ThemeSwitch/ThemeSwitch'
 import { Menu } from 'lucide-react'
 

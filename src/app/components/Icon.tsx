@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
 import ProfileImage from './ProfileImage/ProfileImage';
-import UserMenu from './UserMenu/UserMenu';
 import LoggedInMenu from './LoggedInMenu';
 
 
