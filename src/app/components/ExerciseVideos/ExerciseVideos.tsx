@@ -4,7 +4,6 @@ import Link from "next/link"
 
 function ExerciseVideos({exerciseVideos}:any) {
 
-    console.log(exerciseVideos);
 
     if (!exerciseVideos || exerciseVideos.length === 0) return <div>Loading...</div>;
 
