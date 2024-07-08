@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Next.Js app.<br/>
+Tailwind css for responsive and styling.
+<h2>Nutrition web app to explore Exercises, Healthy Recipes, protein products, and some Gyms in Alexandria</h2>
+<p>Used ExerciseDB API to explore the Exercises and Youtube Search API to suggest tutorial videos about the exercise </p>
+<ul>
+  <li>https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb</li>
+  <li>https://rapidapi.com/h0p3rwe/api/youtube-search-and-download</li>
+</ul>
+<p>Used Recipe Search API from Edamam website to explore Recipes</p>
+<ul>
+  <li>https://developer.edamam.com/edamam-recipe-api</li>
+</ul>
+<br/>
+<h1>Home page</h1>
 
-## Getting Started
+![home page](https://github.com/dizzyF2/gp-next/assets/146489986/ca4f02c2-4b02-4af8-872c-11abaa56ca36)
 
-First, run the development server:
+<br/>
+<h1>Exercises page</h1>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![exercises page](https://github.com/dizzyF2/gp-next/assets/146489986/0b7df27c-b0d6-4800-8aea-7245671bcc3e)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br/>
+<h1>Recipes Page</h1>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![recipes page](https://github.com/dizzyF2/gp-next/assets/146489986/c0eb962e-267a-4dc0-b9c1-66070460384b)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<br/>
+<h1>Protein products Page</h1>
 
-## Learn More
+![protein products page](https://github.com/dizzyF2/gp-next/assets/146489986/ccbcdf4b-d5de-46d1-a357-6bb41109b2f9)
 
-To learn more about Next.js, take a look at the following resources:
+<br/>
+<h1>Gyms Page</h1>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![gyms page](https://github.com/dizzyF2/gp-next/assets/146489986/6e50e4ac-ebb0-4b0c-b162-b4fa04dd9434)
