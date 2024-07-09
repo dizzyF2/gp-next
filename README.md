@@ -3,8 +3,12 @@ Tailwind css for responsive and styling.
 <h2>Nutrition web app to explore Exercises, Healthy Recipes, protein products, and some Gyms in Alexandria</h2>
 <p>Used ExerciseDB API to explore the Exercises and Youtube Search API to suggest tutorial videos about the exercise </p>
 <ul>
-  <li>https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb</li>
-  <li>https://rapidapi.com/h0p3rwe/api/youtube-search-and-download</li>
+  <li>
+    <a href="https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb" target="_blank">https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb</a>
+  </li>
+  <li>
+    <a href="https://rapidapi.com/h0p3rwe/api/youtube-search-and-download" target="_blank">https://rapidapi.com/h0p3rwe/api/youtube-search-and-download</a>
+  </li>
 </ul>
 <p>Used Recipe Search API from Edamam website to explore Recipes</p>
 <ul>
